@@ -1,0 +1,169 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://plus.unsplash.com/premium_photo-1687148812184-d73ac5eb69b9?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;  /* Asegura que la imagen cubra toda la página */
+    background-position: center;
+    background-attachment: fixed; /* Fija la imagen para que no se desplace */
+    color: white;
+}
+
+header {
+    background-color: rgba(255, 102, 102, 0.7); /* Fondo semitransparente */
+    padding: 50px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+#fecha {
+    font-size: 1.3rem;
+}
+
+/* Estilos de botones */
+.buttons-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4c4c;
+}
+
+/* Estilos para la galería */
+.gallery {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    color: #ff6666;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para el video */
+.video-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para las frases */
+.quotes {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.quotes h2 {
+    font-size: 2.5rem;
+    color: white;
+    background-color: rgba(255, 102, 102, 0.7);
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las frases individuales */
+.quotes p {
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro y semitransparente */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Estilos de hover para las frases */
+.quotes p:hover {
+    background-color: rgba(255, 102, 102, 0.8);  /* Cambiar el fondo al pasar el mouse */
+    transition: background-color 0.3s ease;
+}
+
+/* Secciones ocultas */
+#gallerySection,
+#videoSection,
+#quotesSection {
+    display: none;
+}
+
+/* Estilo para la imagen ampliada en la galería */
+.gallery-item.fullscreen {
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Fondo oscuro cuando la imagen está ampliada */
+.fullscreen-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}

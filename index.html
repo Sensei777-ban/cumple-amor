@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños, Mi Amor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sección Principal -->
+    <header>
+        <div class="main-header">
+            <h1>¡Feliz Cumpleaños, Mi Amor!</h1>
+            <p>Te amo mucho y espero que este día sea tan especial como tú. ¡Que todos tus sueños se hagan realidad!</p>
+            <p><strong>Fecha: <span id="fecha"></span></strong></p>
+        </div>
+    </header>
+
+    <!-- Botones de navegación -->
+    <div class="buttons-container">
+        <button id="showGallery">Galería de Fotos</button>
+        <button id="showVideo">Videos Especiales</button>
+        <button id="showQuotes">Frases</button>
+        <button id="playMusic">Música de Fondo</button> <!-- Botón para reproducir música -->
+    </div>
+
+    <!-- Sección de Galería de Fotos -->
+    <section class="gallery" id="gallerySection" style="display: none;">
+        <h2>Galería de Fotos</h2>
+        <div class="gallery-container">
+            <img src="images/ft1 (1).jpg" alt="Foto 1" class="gallery-item">
+            <img src="images/ft1 (2).jpg" alt="Foto 2" class="gallery-item">
+            <img src="images/ft1 (3).jpg" alt="Foto 3" class="gallery-item">
+            <img src="images/ft1 (4).jpg" alt="Foto 4" class="gallery-item">
+            <img src="images/ft1 (5).jpg" alt="Foto 5" class="gallery-item">
+            <img src="images/ft1 (6).jpg" alt="Foto 6" class="gallery-item">
+            <img src="images/ft1 (7).jpg" alt="Foto 7" class="gallery-item">
+            <img src="images/ft1 (8).jpg" alt="Foto 8" class="gallery-item">
+            <img src="images/ft1 (9).jpg" alt="Foto 9" class="gallery-item">
+            <img src="images/ft1 (10).jpg" alt="Foto 10" class="gallery-item">
+            <img src="images/ft1 (11).jpg" alt="Foto 11" class="gallery-item">
+            <img src="images/ft1 (12).jpg" alt="Foto 12" class="gallery-item">
+            <img src="images/ft1 (13).jpg" alt="Foto 13" class="gallery-item">
+        </div>
+    </section>
+
+    <!-- Sección de Videos Especiales -->
+    <section class="video-section" id="videoSection" style="display: none;">
+        <h2>Videos Especiales</h2>
+        <div class="video-container">
+            <video width="100%" height="auto" controls>
+                <source src="images/amor-1.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <video width="100%" height="auto" controls>
+                <source src="images/amor-2.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <video width="100%" height="auto" controls>
+                <source src="images/amor-3.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <video width="100%" height="auto" controls>
+                <source src="images/amor-4.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </section>
+
+    <!-- Sección de Frases -->
+    <section class="quotes" id="quotesSection" style="display: none;">
+        <h2>¡Feliz Cumpleaños, Mi Amor! </h2>
+        <p>"Cada día contigo es un regalo, pero hoy es aún más especial. ¡Feliz cumpleaños, mi amor!"</p>
+        <p>"Hoy celebro no solo tu cumpleaños, sino también mi felicidad de tenerte a mi lado. Gracias por ser el amor de mi vida."</p>
+        <p>"Te amo más de lo que las palabras pueden expresar. Que este día sea tan maravilloso como tú, mi reina."</p>
+        <p>"En tu cumpleaños, quiero que sepas que te amo más que nunca. ¡Feliz día, mi amor!"</p>
+        <p>"Hoy celebramos tu existencia, pero yo celebro cada momento a tu lado. Gracias por llenar mi vida de amor y alegría."</p>
+        <p>"Feliz cumpleaños, mi vida. Cada día contigo me siento más afortunado. Que este día sea tan increíble como tú eres para mí."</p>
+        <p>"Te prometo hacer de cada día un cumpleaños tan maravilloso como el de hoy. Te amo más que a nada."</p>
+        <p>"Cada momento que paso contigo es una bendición. Hoy celebro tu vida y todo lo que eres para mí."</p>
+        <p>"Feliz cumpleaños, mi amor. No hay nada que desee más que verte feliz siempre, porque cuando tú eres feliz, mi mundo es perfecto."</p>
+        <p>"Hoy quiero que el mundo sepa lo afortunado que me siento de tenerte. ¡Feliz cumpleaños, te amo con todo mi corazón!"</p>
+    </section>
+
+    <script src="scripts.js"></script>
+
+    <!-- Script para controlar la música de fondo -->
+    <script>
+        // Crear el elemento de audio
+        const audio = new Audio("images/musi1.mp3");
+        audio.loop = true;  // Asegura que la música se repita
+
+        // Función para reproducir la música
+        document.getElementById("playMusic").addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play(); // Reproducir música
+                this.textContent = "Detener Música de Fondo"; // Cambiar el texto del botón
+            } else {
+                audio.pause(); // Detener música
+                this.textContent = "Música de Fondo"; // Volver al texto original
+            }
+        });
+    </script>
+</body>
+</html>
